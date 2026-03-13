@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // // Router returning a simple string Hello world
 // Route::get("/hello", function(){
@@ -78,10 +78,41 @@ Route::get("/about-us", function() {
     return response()->view('aboutus');
 });
 
-// Route Redirection
-Route::get("/admin", function() {
-    return redirect('/student');
+// // Route Redirection
+// Route::get("/admin", function() {
+//     return redirect('/student');
+// });
+// Route::get("/student", function() {
+//     return "Welcome to Student dashboard";
+// });
+
+// Route::get('/lpu/admin', function() {
+//     return redirect('/lpu/student');
+// });
+
+// Route::get('/lpu/student', function() {
+//     // return "Welcome to student Dashboard. You are Authorised for this Route";
+//     return view('studentlogin');
+//     // return redirect('https://ums.lpu.in/lpuums/');
+// });
+
+//attaching headers to the route
+//headers are used to send additional information with the response
+//for example we can send the about the author of the page, description of the page, keywords etc
+//seen in Nework tab of the browser
+
+// Route::get('/header', function() {
+//     return response("This is a page with custom headers")
+//     ->header('Developer','LPU')
+//     ->header('Description', 'This site is developed to make connection between student and university easier')
+//     ->header('Developed_In_Year', "2024");
+// });
+
+
+Route::get('/', function() {
+    return response()-> view("Welcome")
+    ->header('Developer','LPU')
+    ->header('Description', 'This site is developed to make connection between student and university easier')
+    ->header('Developed_In_Year', "2024");
 });
-Route::get("/student", function() {
-    return "Welcome to Student dashboard";
-});
+
