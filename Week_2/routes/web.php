@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // // Router returning a simple string Hello world
 // Route::get("/hello", function(){
@@ -109,10 +109,52 @@ Route::get("/about-us", function() {
 // });
 
 
-Route::get('/', function() {
-    return response()-> view("Welcome")
-    ->header('Developer','LPU')
-    ->header('Description', 'This site is developed to make connection between student and university easier')
-    ->header('Developed_In_Year', "2024");
+// Route::get('/', function() {
+//     return response()-> view("Welcome")
+//     ->header('Developer','LPU')
+//     ->header('Description', 'This site is developed to make connection between student and university easier')
+//     ->header('Developed_In_Year', "2024");
+// });
+
+
+// Route::get('/headers', function() {
+//     return response("This route is made for navigating to header info. Info is in Newtwork part in console")
+//     ->header('Developed_BY','XYZ')
+//     ->header('Developed_in_year', 2026);
+// });
+
+
+//Passing Data to the views
+//Passing data to the views with associative array
+Route::get('/admin', function() {
+
+    // Passing data to the views with associative array
+    // return view('adminpage', ['name' => 'LPU Student', "designation" => "Programmer", "age" => 23]);
+
+    // pass with with-chaining method
+    // return view("admingpage")
+    // ->with('name','LPU')
+    // ->with('designation','Programmer')
+    // ->with('age',23);
+
+    // Passing using compact method
+    // $name="LPU";
+    // $designation="Programmer";
+    // $age=30;
+    // return view('adminpage', compact('name', 'age', 'designation'));
+
+    // Passing withVariable()
+    {
+        $name = "LPU";
+        $designation = "Programmer";
+        $age = 30;
+
+        return view("adminpage")
+        ->withname($name)
+        ->withDesignation($designation)
+        ->withAge($age);
+    }
+
 });
+
 
