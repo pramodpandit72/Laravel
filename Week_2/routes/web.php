@@ -126,7 +126,7 @@ Route::get("/about-us", function() {
 
 //Passing Data to the views
 //Passing data to the views with associative array
-Route::get('/admin', function() {
+// Route::get('/admin', function() {
 
     // Passing data to the views with associative array
     // return view('adminpage', ['name' => 'LPU Student', "designation" => "Programmer", "age" => 23]);
@@ -144,17 +144,41 @@ Route::get('/admin', function() {
     // return view('adminpage', compact('name', 'age', 'designation'));
 
     // Passing withVariable()
-    {
-        $name = "LPU";
-        $designation = "Programmer";
-        $age = 30;
+//     {
+//         $name = "LPU";
+//         $designation = "Programmer";
+//         $age = 30;
 
-        return view("adminpage")
-        ->withname($name)
-        ->withDesignation($designation)
-        ->withAge($age);
-    }
+//         return view("adminpage")
+//         ->withname($name)
+//         ->withDesignation($designation)
+//         ->withAge($age);
+//     }
 
+// });
+
+
+
+
+Route::get('/result', function () {
+
+    $name = "Rahul Sharma";
+    $roll = 101;
+
+    $math = 85;
+    $science = 78;
+    $english = 90;
+
+    $total = $math + $science + $english;
+    $percentage = $total / 3;
+
+    return view('result', compact(
+        'name',
+        'roll',
+        'math',
+        'science',
+        'english',
+        'total',
+        'percentage'
+    ));
 });
-
-
