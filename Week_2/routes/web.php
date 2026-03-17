@@ -74,9 +74,9 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Route Returning a View i.e 
-// Route::get("/about-us", function() {
-//     return response()->view('aboutus');
-// });
+Route::get("/about-us", function() {
+    return response()->view('aboutus');
+});
 
 // // Route Redirection
 // Route::get("/admin", function() {
@@ -184,10 +184,26 @@ use Illuminate\Support\Facades\Route;
 
 
 // Make a routeproducts returning a view product page
-Route::get('/products', function() {
-    $product1="AC";
-    $product2="Fridge";
-    $product3="Mobile Phone";
-    return view('productpage', compact);
+// Route::get('/products', function() {
+//     // $products=["AC", "Fridge","Mobile Phone"];
+//     $products=[
+//     ["id"=>1,"name"=>"AC","price"=>45000],
+//     ["id"=>2,"name"=>"Fridge","price"=>35000],
+//     ["id"=>3,"name"=>"Moble Phone","price"=>15000]
+//     ];
+//     return view('productpage', compact('products'));
+// });
+
+
+// Route::View('/home', 'home');
+
+// Create a route to store usename="Amit" as a cookie value for 30sec
+// Cookie is an info stored on Client's Browser
+// Cookie value is stored in Application Layer
+// don't save confidential info as a Cookie Data
+Route::get('/set-cookie', function(){
+    $time=30;
+    return response("Cookie value is set successfully")-> cookie('username','Amit',$time);
 });
 
+// Make a route to display cookie value
