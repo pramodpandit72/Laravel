@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // // Router returning a simple string Hello world
 // Route::get("/hello", function(){
@@ -74,9 +74,9 @@ Route::get('/', function () {
 // });
 
 // Route Returning a View i.e 
-Route::get("/about-us", function() {
-    return response()->view('aboutus');
-});
+// Route::get("/about-us", function() {
+//     return response()->view('aboutus');
+// });
 
 // // Route Redirection
 // Route::get("/admin", function() {
@@ -158,27 +158,36 @@ Route::get("/about-us", function() {
 // });
 
 
+// Route::get('/result', function () {
+
+//     $name = "Rahul Sharma";
+//     $roll = 101;
+
+//     $math = 85;
+//     $science = 78;
+//     $english = 90;
+
+//     $total = $math + $science + $english;
+//     $percentage = $total / 3;
+
+//     return view('result', compact(
+//         'name',
+//         'roll',
+//         'math',
+//         'science',
+//         'english',
+//         'total',
+//         'percentage'
+//     ));
+// });
 
 
-Route::get('/result', function () {
 
-    $name = "Rahul Sharma";
-    $roll = 101;
-
-    $math = 85;
-    $science = 78;
-    $english = 90;
-
-    $total = $math + $science + $english;
-    $percentage = $total / 3;
-
-    return view('result', compact(
-        'name',
-        'roll',
-        'math',
-        'science',
-        'english',
-        'total',
-        'percentage'
-    ));
+// Make a routeproducts returning a view product page
+Route::get('/products', function() {
+    $product1="AC";
+    $product2="Fridge";
+    $product3="Mobile Phone";
+    return view('productpage', compact);
 });
+
