@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // // Router returning a simple string Hello world
 // Route::get("/hello", function(){
@@ -201,9 +201,39 @@ Route::get("/about-us", function() {
 // Cookie is an info stored on Client's Browser
 // Cookie value is stored in Application Layer
 // don't save confidential info as a Cookie Data
+// Route::get('/set-cookie', function(){
+//     $time=30;
+//     return response("Cookie value is set successfully")-> cookie('username','Amit',$time);
+// });
+
+// Make a route to display cookie value
+
+
+// Make a route to navigating to student result dashboard
+// Route::get('/btech/result-2025', function() {
+//     $students=[
+// ["id"=> 123, "name"=>"Amit","CGPA"=>7.8],
+// ["id"=> 124, "name"=>"Ankit","CGPA"=>9.6],
+// ["id"=> 125, "name"=>"mohit","CGPA"=>8.6],
+// ["id"=> 126, "name"=>"Anuj","CGPA"=>4.6]
+//     ];
+//     return view('resultDashboard', compact('students'));
+//     // return view('resultDashboard',['students'=>$students]);
+//     // return view('resultDashboard')->with('students',$students);
+//     // return view('resultDashboard')->withStudents('$students');
+// });
+
+
+
+
+
+// Cookies
 Route::get('/set-cookie', function(){
     $time=30;
     return response("Cookie value is set successfully")-> cookie('username','Amit',$time);
 });
 
-// Make a route to display cookie value
+Route::get('/get-cookie', function(){
+    $username=request()->cookie('username');
+    return "Stored Cookie Value on the Browser is". $username;
+});
