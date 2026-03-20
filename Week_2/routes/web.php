@@ -235,5 +235,10 @@ Route::get('/set-cookie', function(){
 
 Route::get('/get-cookie', function(){
     $username=request()->cookie('username');
-    return "Stored Cookie Value on the Browser is". $username;
+    return "Stored Cookie Value on the Browser is " . $username;
+});
+
+// Make a route to delete the cookie
+Route::get('/delete', function(){
+    return response("Cookie is deleted")->cookie('username',null,-1);
 });
