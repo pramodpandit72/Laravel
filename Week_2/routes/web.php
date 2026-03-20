@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MyController;
+
+Route::get('/hi',[MyController::class, 'index']);
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -74,9 +78,9 @@ Route::get('/', function () {
 // });
 
 // Route Returning a View i.e 
-Route::get("/about-us", function() {
-    return response()->view('aboutus');
-});
+// Route::get("/about-us", function() {
+//     return response()->view('aboutus');
+// });
 
 // // Route Redirection
 // Route::get("/admin", function() {
