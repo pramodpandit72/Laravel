@@ -21,4 +21,19 @@ Apply a condition:
 // php artisan make:controller MyController
 // php artisan make:controller ResourseController --resource
 
+Types of Controller:-
+1) Basic - used in form handling 
+  * php artisan make:controller BasicController
+  * Ist letter capital -BasicController is a class that will extends controller class
+  * Form Handling
+
+2) Resource - php artisan make:controller ResourceController --resource
+   * Used for Database handling, CRUD Operation 
+   * Inbuilt Methods - index(), create(), store(), show(), edit(), update(), destroy()
+  
+3) Api
+4) Invokable - php artisan make:controller InvokableController --invokable
+   * inbuild method __invoke() 
+   * Used for login/sign up authentication
+
 
