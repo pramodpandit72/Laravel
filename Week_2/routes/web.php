@@ -2,8 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
+use App\Http\Controllers\BasicController; // path of basic Controller so that we can assess its function
 
 Route::get('/hi',[MyController::class, 'index']);
+
+Route::get('/greet', [BasicController::class, 'greet']);
+
+Route::get('/signup', [BasicController::class, 'signup']);
+// Route::view('/signup','/signup'); --> Shortcut for opening the view
+Route::post('/submitform', function(){
+    return "<script> alsert ('Form submitted Successfully') </script>";
+});
 
 
 Route::get('/', function () {
@@ -231,18 +240,20 @@ Route::get('/', function () {
 
 
 
-// Cookies
-Route::get('/set-cookie', function(){
-    $time=30;
-    return response("Cookie value is set successfully")-> cookie('username','Amit',$time);
-});
+// // Cookies
+// Route::get('/set-cookie', function(){
+//     $time=30;
+//     return response("Cookie value is set successfully")-> cookie('username','Amit',$time);
+// });
 
-Route::get('/get-cookie', function(){
-    $username=request()->cookie('username');
-    return "Stored Cookie Value on the Browser is " . $username;
-});
+// Route::get('/get-cookie', function(){
+//     $username=request()->cookie('username');
+//     return "Stored Cookie Value on the Browser is " . $username;
+// });
 
-// Make a route to delete the cookie
-Route::get('/delete', function(){
-    return response("Cookie is deleted")->cookie('username',null,-1);
-});
+// // Make a route to delete the cookie
+// Route::get('/delete', function(){
+//     return response("Cookie is deleted")->cookie('username',null,-1);
+// });
+
+
