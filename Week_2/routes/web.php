@@ -9,9 +9,9 @@ Route::get('/hi',[MyController::class, 'index']);
 Route::get('/greet', [BasicController::class, 'greet']);
 
 Route::get('/signup', [BasicController::class, 'signup']);
-// Route::view('/signup','/signup'); --> Shortcut for opening the view
+// Route::view('/signup','signup'); --> Shortcut for opening the view
 Route::post('/submitform', function(){
-    return "<script> alsert ('Form submitted Successfully') </script>";
+    return "<script> alert ('Form submitted Successfully') </script>";
 });
 
 

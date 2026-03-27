@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form method="POST" action="/submitform">
+    <form method="post" action="/submitform">
         @csrf
         <!-- // cross-site request forgrey -->
         <label for="username">Enter Username: </label>
