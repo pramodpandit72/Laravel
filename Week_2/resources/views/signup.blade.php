@@ -6,21 +6,23 @@
     <title>form</title>
 </head>
 <body>
-
+    @if($errors->any())
+        {{$errors}}
+    @endif
     <form method="post" action="/submitform">
         @csrf
         <!-- // cross-site request forgrey -->
         <label for="username">Enter Username: </label>
-        <input type="text" name="username" placeholder="Enter username"> <br>
+        <input type="text" name="username" placeholder="Enter username" required> <br>
 
         <label for="name">Enter Name: </label>
-        <input type="text" name="name" placeholder="Enter Name"> <br>
+        <input type="text" name="name" placeholder="Enter Name" required> <br>
 
         <label for="email">Enter Email: </label>
-        <input type="email" name="email" placeholder="Enter email"> <br>
+        <input type="email" name="email" placeholder="Enter email" required> <br>
 
         <label for="password">Enter Password: </label>
-        <input type="password" name="password" placeholder="Enter Password"> <br>
+        <input type="password" name="password" placeholder="Enter Password" required> <br>
 
         <input type="submit" name="submit" value="SUBMIT">
         

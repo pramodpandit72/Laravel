@@ -3,16 +3,15 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
 use App\Http\Controllers\BasicController; // path of basic Controller so that we can assess its function
+use App\Http\Controllers\FormController;
 
 Route::get('/hi',[MyController::class, 'index']);
-
 Route::get('/greet', [BasicController::class, 'greet']);
 
 Route::get('/signup', [BasicController::class, 'signup']);
 // Route::view('/signup','signup'); --> Shortcut for opening the view
-Route::post('/submitform', function(){
-    return "<script> alert ('Form submitted Successfully') </script>";
-});
+Route::post('/submitform', [FormController::class, 'submit']);
+
 
 
 Route::get('/', function () {
