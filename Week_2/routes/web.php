@@ -4,6 +4,27 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
 use App\Http\Controllers\BasicController; // path of basic Controller so that we can assess its function
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\Registration;
+
+
+// Route Drouping
+Route::prefix('lpu')->group (function(){
+
+Route::get('/admin1', function(){
+    return "Welcome to admin page";
+});
+
+Route::get('/student1', function(){
+    return "Welcome to student page";
+});
+
+});
+
+Route::view('/registration', 'registration');
+Route::post('/submit', [Registration::class,'register']);
+// Route::post('/submitform', function () {
+//     return "Form Working";
+// });
 
 Route::get('/hi',[MyController::class, 'index']);
 Route::get('/greet', [BasicController::class, 'greet']);
@@ -11,8 +32,6 @@ Route::get('/greet', [BasicController::class, 'greet']);
 Route::get('/signup', [BasicController::class, 'signup']);
 // Route::view('/signup','signup'); --> Shortcut for opening the view
 Route::post('/submitform', [FormController::class, 'submit']);
-
-
 
 Route::get('/', function () {
     return view('welcome');
