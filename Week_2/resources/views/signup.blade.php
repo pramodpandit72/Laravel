@@ -6,14 +6,25 @@
     <title>form</title>
 </head>
 <body>
-    @if($errors->any())
+    <!-- @if($errors->any())
         {{$errors}}
-    @endif
+    @endif -->
+    
+    <!-- @foreach($errors->all() as $error)
+    <li style="color:red">{{$error}}</li>
+    @endforeach -->
+
     <form method="post" action="/submitform">
         @csrf
         <!-- // cross-site request forgrey -->
         <label for="username">Enter Username: </label>
-        <input type="text" name="username" placeholder="Enter username" required> <br>
+        <input type="text" name="username" placeholder="Enter username" required>
+        <!-- <span style="color:red">
+            @error('username')
+            {{$message}}
+            @enderror
+        </span> -->
+        <br>
 
         <label for="name">Enter Name: </label>
         <input type="text" name="name" placeholder="Enter Name" required> <br>
@@ -22,7 +33,13 @@
         <input type="email" name="email" placeholder="Enter email" required> <br>
 
         <label for="password">Enter Password: </label>
-        <input type="password" name="password" placeholder="Enter Password" required> <br>
+        <input type="password" name="password" placeholder="Enter Password" required>
+        <!-- <span style="color:red">
+            @error('password')
+            {{$message}}
+            @enderror
+        </span> -->
+         <br>
 
         <input type="submit" name="submit" value="SUBMIT">
         

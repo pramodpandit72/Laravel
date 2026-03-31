@@ -11,10 +11,10 @@ class FormController extends Controller
             "name"=>"required|min:1|max:15|regex:/^[A-Za-z\s]+$/",
             "username"=>"required|min:1|max:20|regex:/^[A-Za-z0-9_]+$/",
             "email" => "required|email|unique:users,email",
-            "password' => 'required|min:8|max:20|regex:/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).+$/"
+            "password" => "required|min:8|max:20|regex:/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).+$/"
         ]);
 
-        // return $request->all();
+        return $request->all();
         // return response()->json([
         //     $request->name,
         //     $request->email
