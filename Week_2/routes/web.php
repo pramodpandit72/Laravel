@@ -9,6 +9,7 @@ use App\Http\Controllers\Registration;
 
 // Route Drouping
 Route::prefix('lpu')->group (function(){
+Route::prefix('uni')->group (function(){
 
 Route::get('/admin1', function(){
     return "Welcome to admin page";
@@ -17,7 +18,7 @@ Route::get('/admin1', function(){
 Route::get('/student1', function(){
     return "Welcome to student page";
 });
-
+});
 });
 
 Route::view('/registration', 'registration');

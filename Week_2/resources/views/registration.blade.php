@@ -12,14 +12,14 @@
         @csrf
 
         <!-- Success Message -->
-        @if(session('success'))
+        <!-- @if(session('success'))
             <div class="bg-green-100 text-green-700 p-3 mb-4 rounded">
                 {{ session('success') }}
             </div>
-        @endif
+        @endif -->
 
         <!-- Error Messages -->
-        @if ($errors->any())
+        <!-- @if ($errors->any())
             <div class="bg-red-100 text-red-700 p-3 mb-4 rounded">
                 <ul>
                     @foreach ($errors->all() as $error)
@@ -27,7 +27,7 @@
                     @endforeach
                 </ul>
             </div>
-        @endif
+        @endif -->
 
         <h1 class="text-2xl font-bold mb-6 text-center text-blue-500">
             Student Form
@@ -38,6 +38,11 @@
             <label class="block mb-1 font-medium">Enter Name:</label>
             <input type="text" name="name" value="{{ old('name') }}"
                 class="w-full border border-gray-300 rounded px-3 py-2" required>
+                <span class="text-sm text-red-500">
+                    @error('name')
+                        {{ $message }}
+                    @enderror
+                </span>
         </div>
 
         <!-- Email -->
@@ -45,6 +50,11 @@
             <label class="block mb-1 font-medium">Enter Email:</label>
             <input type="email" name="email" value="{{ old('email') }}"
                 class="w-full border border-gray-300 rounded px-3 py-2" required>
+                <span class="text-sm text-red-500">
+                    @error('name')
+                        {{ $message }}
+                    @enderror
+                </span>
         </div>
 
         <!-- Age -->
@@ -52,6 +62,11 @@
             <label class="block mb-1 font-medium">Age:</label>
             <input type="number" name="age" value="{{ old('age') }}"
                 class="w-full border border-gray-300 rounded px-3 py-2" required>
+                <span class="text-sm text-red-500">
+                    @error('name')
+                        {{ $message }}
+                    @enderror
+                </span>
         </div>
 
         <!-- Course -->
@@ -68,8 +83,13 @@
         <!-- Password -->
         <div class="mb-4">
             <label class="block mb-1 font-medium">Password:</label>
-            <input type="password" name="password"
+            <input type="password" name="password" value="{{old('password')}}"
                 class="w-full border border-gray-300 rounded px-3 py-2" required>
+                <span class="text-sm text-red-500">
+                    @error('name')
+                        {{ $message }}
+                    @enderror
+                </span>
         </div>
 
         <!-- Submit -->
