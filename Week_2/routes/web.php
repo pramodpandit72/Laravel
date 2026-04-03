@@ -6,6 +6,11 @@ use App\Http\Controllers\BasicController; // path of basic Controller so that we
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\Registration;
 
+// Named Routes
+Route::get('/lpu/uni/admin/dashboard/2026',function(){
+    return view('lpudashboard');
+})->name("dash");
+
 
 // Route Drouping
 Route::prefix('lpu')->group (function(){
