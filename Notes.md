@@ -40,3 +40,5 @@ Apply a condition:
    * Used for login/sign up authentication
 
 
+
+php artisan make:view mylayout.header
