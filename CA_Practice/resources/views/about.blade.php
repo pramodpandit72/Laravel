@@ -14,6 +14,12 @@
 </html> --}}
 
 <x-layout>
-    <h1>About Page</h1>
+    {{-- <h1>About Page</h1>
     <h2>{{ $name }}</h2>
+    <h2>{{ $age }}</h2> --}}
+
+    @foreach ($data as $item)
+        <h2>{{ $item }}</h2>
+    @endforeach
+
 </x-layout>
