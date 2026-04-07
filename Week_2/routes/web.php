@@ -88,7 +88,7 @@ Route::get('/', function () {
 // });
 
 // Use of Response Function
-//Create a Route that will return a JSON Response
+// Create a Route that will return a JSON Response
 
 // Route::get("/response", function() {
 //     return response("Route Returning Some Response String");
