@@ -1,9 +1,15 @@
-@extends
+## @extends -> Specifies which layout to inherit.
 
-@section
+## @section -> Defines content sections that will be placed in the layout
 
-@endsection
+## @endsection -> 
 
-@yield -> Used to dynamic
+## @yield -> Marks placeholders in the layout where child templatesUsed to dynamic 
+
+## @include ->
+
+## @stack
+
+## @push ->
 
 
