@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
-// Controller Routing
-Route::get('/user', [UserController::class, 'index']);
+
+Route::get('/students', [UserController::class, 'User']);
 
 
 
@@ -16,46 +16,44 @@ Route::get('/user', [UserController::class, 'index']);
 
 
 
-
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/hello', function() {
-    return "Hello World";
-});
-
-Route::get('/about', function() {
-    return view('about', ["name" => "Pramod ", "age" => "25"]);
-});
-
-// Compact
-// Route::get("/new", function() {
-//     $name="Pramod";
-//     return view("newview", compact("name"));
+// Route::get('/', function () {
+//     return view('welcome');
 // });
 
-// With Method
-// Route::get("/new", function() {
-//     //$name="Pramod;
-//     //$address="Bihar";
-//     return view("newview")->with("name", "Pramod")
-//                           ->with("Address", "Bihar");
+// Route::get('/hello', function() {
+//     return "Hello World";
 // });
 
-// withName()
-// Route::get("/new", function() {
-//     $name="Pramod";
-//     $address="Bihar";
-//     $pin="1234";
-//     return view("newview")->withName($name)
-//                           ->withAddress($address)
-//                           ->withPin($pin);
+// Route::get('/about', function() {
+//     return view('about', ["name" => "Pramod ", "age" => "25"]);
 // });
 
-// Passing the data as an array
-// Route::get("/arraypass", function() {
+// // Compact
+// // Route::get("/new", function() {
+// //     $name="Pramod";
+// //     return view("newview", compact("name"));
+// // });
+
+// // With Method
+// // Route::get("/new", function() {
+// //     //$name="Pramod;
+// //     //$address="Bihar";
+// //     return view("newview")->with("name", "Pramod")
+// //                           ->with("Address", "Bihar");
+// // });
+
+// // withName()
+// // Route::get("/new", function() {
+// //     $name="Pramod";
+// //     $address="Bihar";
+// //     $pin="1234";
+// //     return view("newview")->withName($name)
+// //                           ->withAddress($address)
+// //                           ->withPin($pin);
+// // });
+
+// // Passing the data as an array
+// // Route::get("/arraypass", function() {
 //     return view('about', ["data" => [10,20,30,40,50]]);
 // });
 

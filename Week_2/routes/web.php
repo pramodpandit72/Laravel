@@ -12,18 +12,18 @@ Route::get('/lpu/uni/admin/dashboard/2026',function(){
 })->name("dash");
 
 
-// Route Drouping
+// Route Grouping
 Route::prefix('lpu')->group (function(){
-Route::prefix('uni')->group (function(){
+    Route::prefix('uni')->group (function(){
 
-Route::get('/admin1', function(){
-    return "Welcome to admin page";
-});
+        Route::get('/admin1', function(){
+            return "Welcome to admin page";
+        });
 
-Route::get('/student1', function(){
-    return "Welcome to student page";
-});
-});
+        Route::get('/student1', function(){
+            return "Welcome to student page";
+        });
+    });
 });
 
 Route::view('/registration', 'registration');
@@ -281,3 +281,4 @@ Route::get('/', function () {
 // });
 
 
+// create a laravel application where student data is stored in controller. each student has marks.use a loop to display all student and use if else condition to show pass and fail

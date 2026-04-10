@@ -51,7 +51,7 @@
             <input type="email" name="email" value="{{ old('email') }}"
                 class="w-full border border-gray-300 rounded px-3 py-2" required>
                 <span class="text-sm text-red-500">
-                    @error('name')
+                    @error('email')
                         {{ $message }}
                     @enderror
                 </span>
@@ -63,7 +63,7 @@
             <input type="number" name="age" value="{{ old('age') }}"
                 class="w-full border border-gray-300 rounded px-3 py-2" required>
                 <span class="text-sm text-red-500">
-                    @error('name')
+                    @error('age')
                         {{ $message }}
                     @enderror
                 </span>
@@ -86,7 +86,7 @@
             <input type="password" name="password" value="{{old('password')}}"
                 class="w-full border border-gray-300 rounded px-3 py-2" required>
                 <span class="text-sm text-red-500">
-                    @error('name')
+                    @error('password')
                         {{ $message }}
                     @enderror
                 </span>
