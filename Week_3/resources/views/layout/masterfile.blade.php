@@ -11,6 +11,15 @@
         <h1>Lovely Prfessional University</h1>
     </header>
     
+    <nav>
+        {{-- <a href="{{}}">Home</a> --}}
+        <a href="">SignUp</a>
+        <a href="">Home</a>
+        <a href="">Profile</a>
+        <a href="">Admin</a>
+        <a href="{{ route('registration') }}">Registration</a>
+    </nav
+
     <div>
         @yield('content')
     </div>
