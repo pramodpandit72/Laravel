@@ -13,15 +13,21 @@
     
     <nav>
         {{-- <a href="{{}}">Home</a> --}}
-        <a href="">SignUp</a>
+        <a href="{{route('sign')}}">SignUp</a>
         <a href="">Home</a>
         <a href="">Profile</a>
         <a href="">Admin</a>
         <a href="{{ route('registration') }}">Registration</a>
-    </nav
+    </nav>
 
     <div>
+        @hassection('content')
+        
         @yield('content')
+
+        @else
+            <h1 style="color:red"> OOPS!! No content found </h1>
+        @endif
     </div>
 
     <footer style="background-color: lightblue; text-align:center; padding:10px position:fixed; bottom:0; width:100%">
