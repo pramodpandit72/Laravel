@@ -12,6 +12,11 @@
     @endsection
 </head>
 <body>
+    @if(session('username'))
+    <h1 style="coclor:red";>Welcome {{session('usename')}}</h1>
+    @else
+    <h1>No user Required</h1>
+    @endif
     <div>
         @section('content')
         <p>

@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Registration;
+use App\Http\Controllers\LoginController;
+
+Route::view('/login', 'loginpage');
+Route::post('/loginsubmit',[LoginController::class, 'loginclick']);
+
+Route::get('/logoutsubmit', [LoginController::class, 'logoutclick']);
 
 Route::get('/', function () {
     return view('welcome');
