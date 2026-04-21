@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title')</title>
+    <title>@yield('title', 'lpu')</title>
+
+    <link rel="stylesheet" href="{{asset('css/master.css')}}">
 </head>
 <body>
     <header style="background-color: lightblue; text-align:center; padding:10px position:fixed;">
@@ -18,6 +20,7 @@
         <a href="">Profile</a>
         <a href="">Admin</a>
         <a href="{{ route('registration') }}">Registration</a>
+        <a href="/login">Login Page</a>
     </nav>
 
     <div>
