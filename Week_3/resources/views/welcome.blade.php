@@ -20,9 +20,11 @@
     <div>
         @section('content')
         <p>
-            This is my WELCOME PAGE
+            <!-- This is my WELCOME PAGE -->
+             {{__('welcome.heading')}}
         </p>
-        {{-- <a href="{{ route('lpu2026')}}">Click here for LPU</a> --}}
+        <!-- {{-- <a href="{{ route('lpu2026')}}">Click here for LPU</a> --}} -->
+            <!-- <a href="{{ route('lpu2026')}}">{{__('welcome.subheading')}}</a>  -->
         @endsection
     </div>
 
