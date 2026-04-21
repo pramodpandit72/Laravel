@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="{{ asset('css/master.css') }}">
 </head>
 <body>
-
 <header style="background-color: lightblue; text-align:center; padding:10px; position:fixed; width:100%;">
     <h1>Lovely Professional University</h1>
 </header>
@@ -19,11 +18,13 @@
 </nav>
 
 <div style="margin-top:20px;">
-    @hasSection('content')
-        @yield('content')
+    @if(session('username'))
+        <h1 style="color:red">Welcome {{ session('username') }}</h1>
     @else
-        <h1 style="color:red">OOPS!! No content found</h1>
+        <h1>No user found</h1>
     @endif
+
+    <p>{{ __('welcome.heading') }}</p>
 </div>
 
 <footer style="background-color: lightblue; text-align:center; padding:10px; position:fixed; bottom:0; width:100%;">

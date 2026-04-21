@@ -7,19 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="POST" action="/loginsubmit">
+    @if(session('username'))
+        <h1>Welcome {{ session('username') }}</h1>
+    @else
+        <h1>No user found</h1>
+    @endif
 
+    <form method="POST" action="/loginsubmit">
         @csrf
 
-        <label for="username">Enter Username: </label>
+        <label for="username">Enter Username:</label>
         <input type="text" name="username" required> <br>
 
-        <label for="password">Enter Password: </label>
+        <label for="password">Enter Password:</label>
         <input type="password" name="password" required> <br>
 
-        <input type="submit" name="submit" value="LOGIN" /> 
-
-
+        <input type="submit" name="submit" value="LOGIN" />
     </form>
 </body>
 </html>
