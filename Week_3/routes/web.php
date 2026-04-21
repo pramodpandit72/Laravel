@@ -3,6 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Registration;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MailController;
+
+Route::get('/send-email', [MailController::class,'sendemail']);
+
+
+
 
 Route::view('/login', 'loginpage');
 Route::post('/loginsubmit', [LoginController::class, 'login']);

@@ -42,3 +42,12 @@ Apply a condition:
 
 
 php artisan make:view mylayout.header
+
+
+
+
+
+
+php artisan make:mail WelcomeEmail
+
+php artisan make:controller MailController
