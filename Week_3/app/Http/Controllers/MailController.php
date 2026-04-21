@@ -12,9 +12,9 @@ class MailController extends Controller
         $subject = "Trail Email from Laravel SErver";
         $body = "Test Email From my Server";
         Mail::raw($body, function ($message) use ($to, $subject) {
-        $message->to($to)
-                    ->subject($subject);
+        $message->to($to)->subject($subject);
         });
+        
         return "Email Sent Successfully";
     }
 }
