@@ -52,3 +52,11 @@ php artisan make:mail WelcomeEmail
 
 php artisan make:controller MailController
 
+php artisan make:model Item
+
+php artisan config:clear
+php artisan cache:clear
+php artisan config:cache
+
+php artisan session:table
+php artisan migrate
