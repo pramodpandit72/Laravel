@@ -4,9 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Registration;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\GroceryShop;
+
+Route::get('/get-items',[GroceryShop::Class, 'getitems']);
+
 
 Route::get('/send-email', [MailController::class,'sendemail']);
-
 
 
 
