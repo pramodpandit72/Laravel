@@ -52,6 +52,7 @@ php artisan make:mail WelcomeEmail
 
 php artisan make:controller MailController
 
+## For Database
 php artisan make:model Item
 
 php artisan config:clear
