@@ -40,7 +40,7 @@ Apply a condition:
    * Used for login/sign up authentication
 
 
-
+## For creating file inside header folder
 php artisan make:view mylayout.header
 
 
