@@ -45,14 +45,12 @@ php artisan make:view mylayout.header
 
 
 
-
-
-
 php artisan make:mail WelcomeEmail
 
 php artisan make:controller MailController
 
-## For Database
+## For Database Model creation
+
 php artisan make:model Item
 
 php artisan config:clear
