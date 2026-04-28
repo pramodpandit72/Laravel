@@ -59,3 +59,11 @@ php artisan config:cache
 
 php artisan session:table
 php artisan migrate
+
+## Make Controller and model Together
+php artisan make:controller GroceryShop -m Item
+
+## In musql we keep table as prular of 
+
+
+#  php artisan session:table
