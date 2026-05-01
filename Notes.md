@@ -67,3 +67,8 @@ php artisan make:controller GroceryShop -m Item
 
 
 #  php artisan session:table
+
+
+## composer require mongodb/laravel-mongodb 
+
+## composer diagnose

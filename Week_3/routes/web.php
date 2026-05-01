@@ -5,6 +5,10 @@ use App\Http\Controllers\Registration;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\GroceryShop;
+use App\Http\Controllers\University;
+
+
+Route::get('/get-students',[University::Class, 'index']);
 
 Route::get('/get-items',[GroceryShop::Class, 'getitems']);
 
