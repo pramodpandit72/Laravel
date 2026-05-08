@@ -12,9 +12,18 @@ class University extends Controller
      */
     public function index()
     {
-        $students = Student::all();
+        // $students = Student::all();
+        // $students=Student::where('city','=','Phagwara')->get();
+        // $students=Student::where('marks','>=',80)->get();
+        // $students=Student::select('name', 'city')->get();
+        // $students=Student::orderBy('name','desc')->get();
 
-        return $students;
+        // return $students;
+        // return view('studentdata', compact("students"));
+
+        // $count=Student::count();
+        // return "Total students in db: $count";
+        
     }
 
 
