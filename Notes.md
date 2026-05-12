@@ -80,4 +80,4 @@ php artisan make:controller GroceryShop -m Item
 3. Group Middleware
    
 
-php artisan make:middleware AgeCheck
+# php artisan make:middleware AgeCheck

@@ -8,6 +8,11 @@ use App\Http\Controllers\GroceryShop;
 use App\Http\Controllers\University;
 
 
+// Middleware
+Route::get('/dashboard', function() {
+    return ("Hello from Route middleware");
+})->middleware("checkage");
+
 
 Route::get('/get-students',[University::Class, 'index']);
 
