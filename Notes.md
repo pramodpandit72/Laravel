@@ -72,3 +72,12 @@ php artisan make:controller GroceryShop -m Item
 ## composer require mongodb/laravel-mongodb 
 
 ## composer diagnose
+
+
+## Middleware -
+1. Gloabal Middleware
+2. Route Middleware
+3. Group Middleware
+   
+
+php artisan make:middleware AgeCheck

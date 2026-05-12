@@ -8,6 +8,7 @@ use App\Http\Controllers\GroceryShop;
 use App\Http\Controllers\University;
 
 
+
 Route::get('/get-students',[University::Class, 'index']);
 
 Route::get('/get-items',[GroceryShop::Class, 'getitems']);
