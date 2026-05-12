@@ -22,3 +22,6 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withExceptions(function (Exceptions $exceptions): void {
         //
     })->create();
+
+
+    // in booostrap app.php we have to register the middleware  and here 

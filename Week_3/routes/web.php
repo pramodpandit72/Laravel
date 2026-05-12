@@ -8,13 +8,26 @@ use App\Http\Controllers\GroceryShop;
 use App\Http\Controllers\University;
 
 
+
+Route::middleware('checkage')->group(function() {
+ // Group middleware
+    Route::get('/a', function() {
+    return ("Hello from Route a");
+});
+
+Route::get('/b', function() {
+    return ("Hello from Route b");
+});
+
+});
+
 // Middleware
 Route::get('/dashboard', function() {
     return ("Hello from Route middleware");
 })->middleware("checkage");
 
 
-Route::get('/get-students',[University::Class, 'index']);
+Route::get('/get-students',[University::Class, 'index'])->middleware("checkage");
 
 Route::get('/get-items',[GroceryShop::Class, 'getitems']);
 
