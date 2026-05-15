@@ -81,3 +81,9 @@ php artisan make:controller GroceryShop -m Item
    
 
 # php artisan make:middleware AgeCheck
+
+
+enhancing customer outreach by using social media/p2p network"
+
+
+Thunderclient

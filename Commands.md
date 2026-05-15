@@ -6,3 +6,5 @@
 ## composer require mongodb/laravel mongodb
 
 ## php artisan make:controller Grosery_shop -m Item
+
+## php artisan install:api

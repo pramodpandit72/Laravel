@@ -6,7 +6,10 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\GroceryShop;
 use App\Http\Controllers\University;
+use App\Http\Controllers\APIController;
 
+
+Route::get('/get-quotes',[APIController::class, 'fetchapi']);
 
 
 Route::middleware('checkage')->group(function() {
