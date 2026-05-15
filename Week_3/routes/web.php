@@ -7,6 +7,13 @@ use App\Http\Controllers\MailController;
 use App\Http\Controllers\GroceryShop;
 use App\Http\Controllers\University;
 use App\Http\Controllers\APIController;
+use App\Http\Controllers\FileController;
+
+Route::get('/upload', function () {
+    return view('upload');
+});
+
+Route::post('/upload', [FileController::class, 'uploadFile']);
 
 
 Route::get('/get-quotes',[APIController::class, 'fetchapi']);

@@ -87,3 +87,15 @@ enhancing customer outreach by using social media/p2p network"
 
 
 Thunderclient
+
+## question: -
+Create your oewn API with amd php artisan install:api using routes->api.php
+
+Route for your API
+
+Test API using thunderclient
+
+Fetch data from any API using Http::get()
+
+## Upload a file on server and display it on UI
+
