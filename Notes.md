@@ -97,5 +97,5 @@ Test API using thunderclient
 
 Fetch data from any API using Http::get()
 
-## Upload a file on server and display it on UI
+## Upload a file on server and display it on UI -
 
