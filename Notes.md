@@ -86,7 +86,7 @@ php artisan make:controller GroceryShop -m Item
 enhancing customer outreach by using social media/p2p network"
 
 
-Thunderclient
+## Thunderclient -> Tool to check API
 
 ## question: -
 Create your oewn API with amd php artisan install:api using routes->api.php
