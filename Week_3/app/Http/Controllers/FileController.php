@@ -9,17 +9,15 @@ class FileController extends Controller
 {
 	public function uploadFile(Request $request)
 	{
-		$validated = $request->validate([
-			'file' => 'required|image|mimes:jpg,jpeg,png,webp|max:2048',
-		]);
+		$path = $request->file('myfile')->store('uploads','public');
+		// return $path;
 
-		$file = $validated['file'];
-		$path = $file->store('uploads', 'public');
-		$url = Storage::url($path);
-
-		return view('upload', [
-			'fileUrl' => $url,
-			'originalName' => $file->getClientOriginalName(),
-		]);
+		$filenameArray = explode('/',$path);
+		$filename = $filenameArray[1];
+		return view('upload', ['path' => $filename]);
+		
+		return $filename;
 	}
 }
+
+

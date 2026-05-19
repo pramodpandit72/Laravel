@@ -99,3 +99,17 @@ Fetch data from any API using Http::get()
 
 ## Upload a file on server and display it on UI -
 
+## php artisan storage:link
+
+
+Passing data to views
+sharing data to views
+app service provider
+attaching headers
+json response
+redirect function 
+
+named roures
+controller routing
+
+

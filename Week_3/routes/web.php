@@ -16,8 +16,9 @@ Route::get('/upload', function () {
 Route::post('/upload', [FileController::class, 'uploadFile']);
 
 
-Route::get('/get-quotes',[APIController::class, 'fetchapi']);
 
+
+Route::get('/get-quotes',[APIController::class, 'fetchapi']);
 
 Route::middleware('checkage')->group(function() {
  // Group middleware
