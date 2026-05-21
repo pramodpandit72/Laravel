@@ -65,14 +65,11 @@ php artisan make:controller GroceryShop -m Item
 
 ## In musql we keep table as prular of 
 
-
 #  php artisan session:table
-
 
 ## composer require mongodb/laravel-mongodb 
 
 ## composer diagnose
-
 
 ## Middleware -
 1. Gloabal Middleware
@@ -101,6 +98,9 @@ Fetch data from any API using Http::get()
 
 ## php artisan storage:link
 
+## php artisan --> This command shows all php commands in terminal
+
+## composer create-project laravel/laravel project-name
 
 Passing data to views
 sharing data to views
@@ -111,5 +111,10 @@ redirect function
 
 named roures
 controller routing
+
+error message
+customizing errormessage
+repopulating form
+
 
 
