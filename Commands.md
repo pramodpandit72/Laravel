@@ -43,3 +43,5 @@ php artisan tinker - interact with application using command line
 
 php artisan make:request StoreUserRequest - create form request validation class  
 php artisan make:resource UserResource - create API resource class  
+
+composer require mongodb/laravel-mongodb - install official MongoDB integration for Laravel (modern and recommended package)  
