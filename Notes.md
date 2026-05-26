@@ -51,7 +51,7 @@ php artisan make:controller MailController
 
 ## For Database Model creation
 
-php artisan make:model Item
+# php artisan make:model Item
 
 php artisan config:clear
 php artisan cache:clear
