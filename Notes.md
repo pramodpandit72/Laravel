@@ -102,6 +102,8 @@ Fetch data from any API using Http::get()
 
 ## composer create-project laravel/laravel project-name
 
+# php artisan make:middleware globalmiddleware
+
 # Question - 
 Passing data to views
 sharing data to views
