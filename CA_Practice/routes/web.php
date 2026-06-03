@@ -7,3 +7,4 @@ use App\Http\Controllers\FormValidation;
 // Route::get('/', [FormValidation::class, 'showForm']);
 Route::get('/show-form', [FormValidation::class, 'showForm']);
 Route::post('/submit-form', [FormValidation::class, 'submitForm']);
+Route::get('/data', [FormValidation::class, 'showData']);

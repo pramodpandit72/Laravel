@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\FormData;
 
 use Illuminate\Http\Request;
 
@@ -27,6 +28,15 @@ class FormValidation extends Controller
             'age.max' => 'Age cannot be more than 100',
             
         ]);
-        return "Form Submitted successfully";
-    }
-}
+        // return "Form Submitted successfully";
+
+        FormData::create($request->only(['name','age','course']));
+
+        return redirect('/data');
+
+        }
+        public function showData(){
+            $students = FormData::all();
+            return view('DataView', compact('students'));
+        }
+        }
