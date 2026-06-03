@@ -42,8 +42,6 @@ Route::get('/get-items',[GroceryShop::Class, 'getitems']);
 
 Route::get('/send-email', [MailController::class,'sendemail']);
 
-
-
 Route::view('/login', 'loginpage');
 Route::post('/loginsubmit', [LoginController::class, 'login']);
 
@@ -61,4 +59,5 @@ Route::get('/lpu/signup/2026', function(){
 
 
 Route::view('/registration', 'registration')->name('registration');
+
 Route::post('/submit', [Registration::class,'register']);
