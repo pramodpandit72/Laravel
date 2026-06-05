@@ -11,6 +11,10 @@ Route::get('/welcome/{name}', function ($name) {
     return view('welcome', ['name' => $name]);
 });
 
+Route::get('/login', function () {
+    return "Login Page";
+})->name('login');
+
 Route::get('/dashboard', function () {
     return "Dashboard";
 })->middleware('auth');

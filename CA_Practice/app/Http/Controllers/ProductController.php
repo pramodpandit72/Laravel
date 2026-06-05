@@ -14,6 +14,6 @@ class ProductController extends Controller
         ['name' => 'Tablet', 'quantity' => 7, 'price' => 15000],
     ];
 
-    return view('products', compact('products'));
+    return view('productsView', compact('products'));
 }
 }

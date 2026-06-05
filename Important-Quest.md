@@ -84,19 +84,15 @@ in a web application.
 Q7. A developer created a migration to build a students table but forgot to add timestamps.
 
 Explain how to:
-
 1. Create the migration.
-
 2. Add columns:
 
 id
 name
 email
-
 timestamps
 
 3. Run the migration.
-
 4. Roll back the migration.
 
 ---
