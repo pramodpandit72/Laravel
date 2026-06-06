@@ -4,16 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Product;
 class ProductController extends Controller
 {
-    public function showProducts()
-{
-    $products = [
-        ['name' => 'Laptop', 'quantity' => 5, 'price' => 50000],
-        ['name' => 'Mobile', 'quantity' => 10, 'price' => 20000],
-        ['name' => 'Tablet', 'quantity' => 7, 'price' => 15000],
-    ];
 
-    return view('productsView', compact('products'));
+public function showProducts()
+{
+    $products = Product::all();
+    return view('products', compact('products'));
 }
+
+    public function showProducts2()
+    {
+        $products = Product::all();
+
+        return view('products')->with('products', $products);
+    }
 }
