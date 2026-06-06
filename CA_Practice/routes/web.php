@@ -3,8 +3,18 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\FormValidation;
-use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SendEmail;
+use App\Http\Controllers\ProductController;
+
+
+Route::get('/products',[ProductController::class, 'showProducts']);
+// Route::get('/products2',[ProductController::class, 'showProducts2']);
+
+
+
+
+
+
 
 
 Route::get('/welcome/{name}', function ($name) {
